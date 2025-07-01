@@ -1,0 +1,134 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(to bottom, #051a0b, #103c1f);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+  color: #ffffff;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Main Box */
+.galaxy-box {
+  background: linear-gradient(to bottom right, #0f5132, #198754);
+  width: 95%;
+  max-width: 600px;
+  padding: 40px 30px;
+  border: 3px solid #aaffaa;
+  border-radius: 25px;
+  box-shadow: 0 0 40px rgba(0, 255, 127, 0.6);
+  text-align: center;
+  z-index: 1;
+  position: relative;
+  margin-top:160px;
+}
+
+
+h1 {
+  font-size: 2.2rem;
+  color: #b6ffcd;
+  text-shadow: 0 0 10px #cfffde;
+}
+
+.try-text {
+  margin: 10px 0 20px;
+  font-size: 1.1rem;
+  color: #caffd9;
+}
+
+input,
+select {
+  padding: 12px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 300px;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 12px 28px;
+  font-size: 1rem;
+  background-color: gold;
+  color: black;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+}
+button:hover {
+  background-color: #ffec8b;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px gold;
+}
+
+/* Mood Message */
+.mood-display {
+  margin-top: 25px;
+  text-align: center;
+}
+#moodText {
+  font-size: 1.8rem;
+  color: red;
+  font-weight: bold;
+  text-shadow: 0 0 8px #ffaaaa;
+}
+
+/* Mood Themes */
+.galaxy-box.happy {
+  background: linear-gradient(to bottom right, #0f5132, #198754);
+}
+.galaxy-box.sad {
+  background: linear-gradient(to bottom right, #6b0505, #a30d0d);
+}
+.galaxy-box.excited {
+  background: linear-gradient(to bottom right, #44006b, #7700ff);
+}
+.galaxy-box.stressed {
+  background: linear-gradient(to bottom right, #333333, #555555);
+}
+
+/* ==== STAR EFFECT AT BOTTOM ==== */
+#star-container {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 120px;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.star {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: twinkle 2s infinite ease-in-out;
+  box-shadow: 0 0 6px #fff, 0 0 10px #fff;
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.2;
+    transform: scale(1.5);
+}
+}

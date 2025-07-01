@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DG Mood Galaxy</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Main Box -->
+  <div class="galaxy-box">
+    <div class="header">
+      <h1>DG Mood Galaxy</h1>
+      <p class="try-text">Check your mood and get a special message</p>
+    </div>
+    <div class="controls">
+      <input type="text" id="userName" placeholder="Enter your name" />
+      <br /><br />
+      <select id="mood">
+        <option value="">Select Mood</option>
+        <option value="happy">Happy</option>
+        <option value="sad">Sad</option>
+        <option value="excited">Excited</option>
+        <option value="stressed">Stressed</option>
+      </select>
+      <br /><br />
+      <button id="submitBtn">Submit</button>
+    </div>
+  </div>
+
+  <!-- Mood Message Display -->
+  <div class="mood-display">
+    <p id="moodText"></p>
+  </div>
+
+  <!-- Star Container (Bottom Blinking Stars) -->
+  <div id="star-container"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
